@@ -13,11 +13,17 @@ This one is a single archetype, a sharp staff engineer who sits next to you and 
 
 ## Usage
 
-Put `SOUL.md` next to your agent's instruction file and import it. In Claude Code, add a single line to `CLAUDE.md`:
+Paste the contents of `SOUL.md` directly into your agent's instruction file, near the top. In Claude Code that is `CLAUDE.md`:
 
-    @SOUL.md
+    # CLAUDE.md
+    ## SOUL
+    <paste SOUL.md here>
 
-Then start a fresh session. The agent should answer result-first and act on its own without being told.
+    ## ... the rest of your operating manual
+
+Inline the text, do not rely on an `@SOUL.md` import: a user-level `CLAUDE.md` does not reliably resolve import directives, so the file would sit there doing nothing. Start a fresh session after pasting.
+
+What changes once it loads: the agent answers result-first instead of narrating its way to the point, picks up reversible work without asking, pushes back once on a bad call and then builds what you chose, verifies before it says "done", and keeps a dry, sparing sense of humour. If it announces what it is about to do instead of doing it, the SOUL is not loaded.
 
 The reference text is written in Dutch, because that is the voice it was built in and the dry humour does not survive a machine translation. The principles port directly to any language; rewrite it in your own voice rather than translating it word for word. That is the point: a SOUL is yours, not a template.
 
